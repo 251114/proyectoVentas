@@ -1,0 +1,193 @@
+.btn-nuevo{
+    background-color: white;
+    color:#5D6D7E  ;
+    border-color:#5D6D7E;
+    margin-bottom:30px;
+    cursor: pointer;
+}
+
+.nuevo{
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.btn-nuevo:hover{
+    background-color: #5D6D7E  ;
+    color:white;
+    border-color: white;
+}
+
+.fa{
+    cursor: pointer;
+}
+
+.mas{
+  margin-right: 2px;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+table {
+    background-color: transparent;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contenedor{
+	background-color: white;
+}
+.todo{
+	background-color: white;
+}
+
+.tip_ev{
+	margin-top: 10px;
+}
+
+.fech_ev{
+	margin-top: 5px;
+}
+
+.div-imagen{
+	    border-radius: 3px;
+    border: 1px dashed #c1c1c1;
+    min-height: 150px;
+}
+
+.c-dropzone .dropzone {
+    background: transparent;
+}
+
+.dropzone.dz-clickable {
+    cursor: pointer;
+}
+.dropzone {
+    border: 0;
+    min-height: 0;
+    padding: 0;
+}
+
+.imagen{
+	margin-top: 40px;
+}
+
+
+.thumb {
+            height: 300px;
+            border: 1px solid red;
+            margin: 10px 5px 0 0;
+          }
+
+/**/
+
+
+
+
+
+.botones{
+    margin-top: 5px;
+}
+
+.table>tbody>tr>td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 2px solid #ddd;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.table>thead>tr>th{
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-bottom: 2px solid #ddd;
+
+}
+
+.tabla-prov{
+    width: 100%;
+}
+ 
+
+.table{
+    font-size: 14px;
+    color: #747678;
+}
+
+.titulo{
+    min-height: 100px;
+    display: block;
+    padding-top: 40px;
+    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.titulo h3{
+    color: #fff;
+}
+.text-adm{
+    font-size: 15px;
+    color: #747678;
+}
+
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    color: black;
+}
+
+.btn-danger{
+    color:white;
+}
+.btn-add{
+    color: #333;
+    background-color: #008B8B;
+    border-color: #ccc;
+    color: white;
+}
+
+.btn-group {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.prov{
+    margin-left: 5px;
+}
+.boton{
+    text-align: center;
+    padding: 20px 0px;
+    width: 100%;
+  }
+  

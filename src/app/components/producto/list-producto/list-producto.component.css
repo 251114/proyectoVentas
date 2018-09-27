@@ -1,0 +1,68 @@
+.texto{
+	padding-left: 1.2em;
+}
+
+.title{
+    min-height: 130px;
+    display: block;
+    padding-top: 40px;
+    background-color:   #19b4b2;
+    color: #fff;
+    margin: 0 auto;
+	text-align: center;
+}
+
+.section{
+	background-color: white;
+	padding: 0.7em;
+}
+
+.container{
+	background-color: white;
+	/* box-shadow: 2px 2px 2px 2px  silver; */
+  padding: 0px;
+  border: 1px solid silver;
+}
+
+.contenedor{
+	background-color: white;
+}
+
+a:hover{
+	color: black;
+}
+
+.desafio{
+	color: #088A85;
+	font-family: arial,helvetica;
+	font-size: 25px;
+}
+
+.tiempo{
+	color: gray;
+  text-decoration: none;
+  padding-right: 30px;
+  text-align: justify;
+}
+
+.enlace{
+	cursor: pointer;
+}
+
+.desafio:hover{
+	color: #5F9EA0;
+}
+
+img{
+	width: 100%;
+	height: 275px;
+	cursor:pointer;
+}
+
+.titulo{
+	text-align: center;
+}
+h2{
+	text-align: center;
+}
+

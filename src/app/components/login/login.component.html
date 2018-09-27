@@ -1,0 +1,47 @@
+
+<img  class="img-fluid img-fondo" src="https://www.okchicas.com/wp-content/uploads/2016/12/10-reglas-de-oro-que-te-har%C3%A1n-millonaria-2.jpg">
+<!-- <div class="imagen">
+</div> -->
+<div class="demas"></div>
+
+<br>
+<div class="container" >
+
+        <div class="card card-container">
+            <img id="profile-img" class="profile-img-card" src="assets/iconos/icono.png" />
+            <p class="vista">WorldShop</p>
+            <p id="profile-name" class="profile-name-card"></p>
+            <div *ngIf="errorMessage" >
+              <div class="alert alert-info">
+                <strong>Error: </strong>{{errorMessage}}
+              </div>
+            </div>
+            <!-- <form #loginForm="ngForm" (ngSubmit)="loginUser()" class="form-signin"> -->
+                <form  class="form-signin" #loginForm="ngForm" (ngSubmit)="loginUser()" >
+                    <span id="reauth-email" class="reauth-email"></span>
+                <input #email="ngModel" name="email" [(ngModel)]="user.email" type="email" id="inputEmail" class="form-control" placeholder="usuario" required autofocus>
+                <input #password="ngModel" name="password" [(ngModel)]="user.password" type="password" id="inputPassword" class="form-control" placeholder="contraseña" required>
+                <div id="remember" class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Recuérdame
+                    </label>
+                </div>
+
+                <button [disabled]="!loginForm.form.valid"  class="btn btn-lg btn-primary btn-block btn-signin"
+                 type="submit"><i class="fa fa-sign-out" aria-hidden="true"></i>
+                Iniciar sesión</button>
+                Iniciar sesión con
+                <div class="redes">
+                <i class="fa fa_google fa-google-plus-square" aria-hidden="true"></i>
+                <i class="fa fa_face fa-facebook-official" aria-hidden="true"></i>
+                <i class="fa fa_twiter fa-twitter-square" aria-hidden="true"></i>
+            </div>
+            </form>
+            <p  class="cuenta">
+                No tiene cuenta?
+                <a [routerLink]="['/register']">Crear cuenta</a>
+                <br>
+
+            </p>
+        </div>
+</div>

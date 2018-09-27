@@ -1,0 +1,225 @@
+.imagen{
+  height: 100%;
+}
+.img-fondo{
+    /* z-index: 4; */
+    /* height: 100%; */
+    margin: 0;
+}
+#profile-img{
+    position: relative;
+}
+
+#remember{
+    color: black;
+}
+
+.container{
+    margin-top: -56px;
+}
+.card-container.card {
+    max-width: 350px;
+}
+
+.btn {
+    font-weight: 700;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.card {
+    /*background-color: #F7F7F7;
+    just in case there no content*/
+    background-color: rgba(255,255,255,0.5);
+    padding: 20px 25px 0px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img-card {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.profile-name-card {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 0;
+    min-height: 1em;
+}
+
+.reauth-email {
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form-signin{
+    margin-top: -20px;
+}
+
+.alert-info{
+    margin-top: -35px;
+}
+
+.form-signin #inputEmail,
+.form-signin #inputPassword {
+    direction: ltr;
+    height: 44px;
+    font-size: 16px;
+}
+
+.form-signin input[type=email],
+.form-signin input[type=password],
+.form-signin input[type=text],
+.form-signin button {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+    border-color: rgb(104, 145, 162);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+}
+
+.btn.btn-signin {
+    background-color: rgb(104, 145, 162);
+    padding: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+}
+
+.btn.btn-signin:hover,
+.btn.btn-signin:active,
+.btn.btn-signin:focus {
+    background-color: #008B8B;
+    cursor: pointer;
+}
+
+.forgot-password {
+    color: rgb(0, 0, 0);
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.demas{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+	background:rgba(40,57,101,.6);
+
+}
+
+.redes{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.fa_face, .fa_google, .fa_twiter{
+    cursor: pointer;
+}
+
+.fa_face{
+    color:rgb(70,130,180,0.9);
+    font-size: 40px;
+    margin-left: 10px;
+}
+
+.fa_twiter{
+    margin-left: 10px;
+    color:rgb(0,191,255,0.9);
+    font-size: 40px;
+}
+
+.fa_google{
+    color:rgb(165,42,42,0.9);
+    font-size: 40px;
+}
+
+.fa_face:hover{
+    color:rgb(70,130,180,1);
+}
+
+.fa_twiter:hover{
+    color:rgb(0,191,255,1);
+}
+
+.fa_google:hover{
+    color:rgb(165,42,42,1);
+}
+
+
+.cuenta{
+    color: #696969;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.cuenta a{
+    color: rgb(0,128,128,0.7);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.cuenta a:hover{
+    color: rgb(0,128,128,1);
+}
+
+.card .vista{
+    text-align: center;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    color:#708090;
+    margin-top: -10px;
+}
+
+form{
+    margin-top: -20px;
+}

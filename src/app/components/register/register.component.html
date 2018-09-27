@@ -1,0 +1,61 @@
+<!-- multistep form -->
+
+    <div class="demas"></div>
+
+<form id="msform">
+    <!-- progressbar -->
+    <ul id="progressbar">
+      <li class="active">Cuenta</li>
+      <li>Redes sociales</li>
+      <li>Datos personales</li>
+    </ul>
+    <!-- fieldsets -->
+
+    <fieldset>
+        <img id="profile-img" class="profile-img-card" src="assets/iconos/icono.png" />
+        <p class="vista">WorldShop</p>
+
+      <h2 class="fs-title">Bienvenido, registre su cuenta</h2>
+      <div class="col-xs-12 col-md-6 ">
+          <mat-form-field class="texto" appearance="outline">
+            <mat-label>Seleccione tipo de usuario</mat-label>
+            <mat-select  name="role" [(ngModel)]="user.role" [formControl]="tipoControl" required>
+              <mat-option *ngFor="let tipo of tipos" [value]="tipo.valor">
+                {{tipo.name}}
+              </mat-option>
+            </mat-select>
+
+            <mat-error *ngIf="tipoControl.hasError('required')">No ha seleccionado tipo de usuario</mat-error>
+          </mat-form-field>
+        </div>
+
+
+      <input #email="ngModel" name="email" [(ngModel)]="user.email" type="text" name="email" placeholder="Usuario" />
+      <input #password="ngModel" name="password" [(ngModel)]="user.password" type="password" name="pass" placeholder="Contraseña" />
+      <input type="password" name="cpass" placeholder="Confirme Contraseña" />
+      <a [routerLink]="['/principal']">Inicio</a>
+      <input type="button" name="next" class="next action-button" value="Siguiente" />
+    </fieldset>
+    <fieldset>
+
+
+      <h2 class="fs-title">Redes sociales</h2>
+      <input #facebook="ngModel" name="facebook" [(ngModel)]="user.facebook" type="text" name="twitter" placeholder="Twitter" />
+      <input #twiter="ngModel" name="twiter" [(ngModel)]="user.twiter" type="text" name="facebook" placeholder="Facebook" />
+      <input type="button" name="previous" class="previous action-button" value="Anterior" />
+      <input type="button" name="next" class="next action-button" value="Siguiente" />
+    </fieldset>
+    <fieldset>
+      <h2 class="fs-title">Datos personales</h2>
+      <input #name="ngModel" name="name" [(ngModel)]="user.name" type="text" name="fname" placeholder="Nombre" />
+      <input #surname="ngModel" name="surname" [(ngModel)]="user.surname" type="text" name="lname" placeholder="Apellidos" />
+      <input #celular="ngModel" name="celular" [(ngModel)]="user.celular" type="text"  placeholder="Celular" />
+      <input #ciudad="ngModel" name="ciudad" [(ngModel)]="user.ciudad" type="text"  placeholder="Ciudad" />
+      <input #direccion="ngModel" name="direccion" [(ngModel)]="user.direccion" type="text"  placeholder="Dirección" />
+
+      <input type="button" name="previous" class="previous action-button" value="Anterior" />
+      <input
+        (click)="saveUser()"
+      type="submit" name="submit" class="submit action-button" value="Registrar" />
+    </fieldset>
+  </form>

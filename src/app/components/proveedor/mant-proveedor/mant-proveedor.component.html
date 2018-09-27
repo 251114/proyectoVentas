@@ -1,0 +1,60 @@
+<div class="contenedor">
+
+  <header class="titulo">
+    <h3>Administración de Proveedores</h3>
+  </header>
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <span class="text-adm col-xs-12 col-md-12">Use la tabla a continuación para administrar sus proveedores.</span>
+      <br><br>
+      <!--   <div class="table-responsive"> -->
+      <div class="tabla-prov">
+        <table class="table table-responsive tabla">
+          <thead>
+            <tr>
+              <th>N°</th>
+              <th>Nombre</th>
+              <th>Tipo de ropa</th>
+              <th>Celular</th>
+              <th>Descripción</th>
+              <th>Email</th>
+              <th>Direccion</th>
+              <th>editar/eliminar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let proveedor of proveedores; let i=index">
+              <td scope="row">{{i+1}}</td>
+              <td>{{proveedor.nombre}}</td>
+              <td>{{proveedor.tipo}}</td>
+              <td>{{proveedor.celular}}</td>
+              <td>{{proveedor.descripcion}}</td>
+              <td>{{proveedor.email}}</td>
+              <td>{{proveedor.direccion}}</td>
+              <td>
+                <div class="btn-group">
+                  <button class="btn btn-default" (click)="editProveedor(proveedor._id)"><span class="fa fa-pencil"></span></button>
+                  <button class="btn btn-danger" (click)="deleteProveedor(proveedor._id)"><span class="fa fa-trash"></span></button>
+                </div>
+              </td>
+            </tr>
+        </table>
+      </div>
+
+      
+      <div class="boton">
+          <button class="btn btn-info nuevo" [routerLink]="['/principal']"><i
+            class="fa fa-arrow-left mas" aria-hidden="true"></i>
+          <strong>Regresar inicio</strong></button>
+        <button class="btn prov btn-nuevo" [routerLink]="['/new-proveedor']"><i
+            class="fa fa-plus mas" aria-hidden="true"></i>
+          <strong>Nuevo proveedor</strong></button>
+        </div>
+        
+    </div>
+
+    <section *ngIf="proveedores.length<3"></section>
+  </div>
+</div>
