@@ -1,0 +1,17 @@
+/*
+body{
+    background-repeat: no-repeat;
+    background-image: url(https://c.pxhere.com/photos/fa/10/laptop_ring_hand_iphone_phone-3859.jpg!d);
+          background-size: 100% auto;
+}
+
+body{
+	background-color: #eee;
+}
+*/
+body{
+	background-color: #F8F8FF;
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+}
