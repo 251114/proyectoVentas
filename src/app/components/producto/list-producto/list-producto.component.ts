@@ -36,7 +36,7 @@ export class ListProductoComponent implements OnInit {
 
   getProductos()
   {                  
-        this._productoService.getProductos(this.token, this.identity._id).subscribe(
+        this._productoService.getTProductos(this.token).subscribe(
             response =>{
               if(!response.productos){
                 }else{

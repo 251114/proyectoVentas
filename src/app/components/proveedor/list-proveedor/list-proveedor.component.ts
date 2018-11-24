@@ -40,7 +40,7 @@ upProveedor(idProveedor:String){
 
 getProveedores()
 {                 
-   	   this._proveedorServe.getProveedores(this.token,this.identity._id).subscribe(
+   	   this._proveedorServe.getTProveedores(this.token).subscribe(
           response =>{
             if(!response.proveedores){
                 //  this.aletMessage

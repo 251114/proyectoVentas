@@ -46,6 +46,16 @@ export class ProveedorService {
       .map(res => res.json());
   }
 
+  getTProveedores(token) {
+
+    let headers = new Headers({ 'Content-Type': 'application/json', 'Authorization': token });
+    let options = new RequestOptions({ headers: headers });
+
+    return this._http.get(this.url + 'getproveedores', options)
+      .map(res => res.json());
+  }
+
+
 
 
   updateProveedor(token, id: String, proveedor: Proveedor) {

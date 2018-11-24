@@ -46,6 +46,16 @@ export class ProductoService {
       .map(res => res.json());
   }
 
+  getTProductos(token) {
+
+    let headers = new Headers({ 'Content-Type': 'application/json', 'Authorization': token });
+    let options = new RequestOptions({ headers: headers });
+
+    return this._http.get(this.url + 'getproductos', options)
+      .map(res => res.json());
+  }
+
+
 
 
   updateProducto(token, id: String, producto: Producto) {
