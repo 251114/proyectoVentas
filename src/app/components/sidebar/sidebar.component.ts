@@ -32,6 +32,7 @@ export class SidebarComponent implements OnInit {
     if (this.identity) {
       this.nameUser = this.identity.name;
     }
+    console.log(this.identity);
 
 
 

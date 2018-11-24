@@ -46,7 +46,7 @@ export class MantProveedorComponent implements OnInit {
   }
 
   getProveedores() {
-    this._proveedorService.getProveedores(this.token).subscribe(
+    this._proveedorService.getProveedores(this.token,this.identity._id).subscribe(
       response => {
         if (!response.proveedores) {
 

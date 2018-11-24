@@ -1,0 +1,67 @@
+<div class="section-tabla fondo">
+	<br>
+
+	<div class="container todo">
+		<div class="cabecera">
+			<h5>Administración de Productos</h5>
+		</div>
+		<br>
+		<div class="col-xl-10 offset-xl-1">
+			<span class="info">Adelante, configura las productos de tu empresa, puedes crearlos seleccionando el botón Agregar</span>
+
+			<div class="table-responsive lista" *ngIf="this.productos.length>0">
+				<table class="table table-hover tabla">
+					<thead>
+						<tr class="theader">
+							<th>N°</th>
+							<th>Nombre</th>
+							<th>Descripción</th>
+							<th>Talla</th>
+							<th>Material</th>
+							<th>Envio</th>
+							<th>Precio Compra</th>
+							<th>Precio Venta</th>
+							<th>Cantidad</th>
+							<th>Acción</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let producto of productos; let i=index" [ngClass]="{'table-active': i==_ind && sombrear==true
+												}"
+						 (click)="recuperar_etapa(etapa)" (click)="sombrear=true">
+							<td scope="row">{{i+1}}</td>
+							<td>{{producto.nombre}}</td>
+							<td>{{producto.descripcion}}</td>
+							<td>{{producto.talla}}</td>
+							<td>{{producto.material}}</td>
+							<td>{{producto.envioInternacional}}</td>
+							<td>{{producto.precioCompra}}</td>
+							<td>{{producto.precioVenta}}</td>
+							<td>{{producto.cantidad}}</td>
+							<td>
+								<div class="btn-group">
+									<button class="btn btn-default" (click)="editProducto(producto._id)"><span class="fa fa-pencil"></span></button>
+									<button class="btn btn-danger" (click)="deleteProducto(producto._id)"><span class="fa fa-trash"></span></button>
+								</div>
+
+							</td>
+						</tr>
+				</table>
+			</div>
+		</div>
+		<div class="botones">
+
+			<button mat-button class="btn btnprevious" [routerLink]="['/principal']">
+				<i class="fa fa-chevron-left previous" aria-hidden="true"></i>
+				Inicio</button>
+
+			<button mat-button class="btn btn_add" [routerLink]="['/new-producto']">
+				<i class="fa fa-plus" aria-hidden="true"></i>
+				Agregar</button>
+		</div>
+	</div>
+	<br>
+</div>
+
+<section class="section-tabla" *ngIf="this.cantidad==0">
+</section>

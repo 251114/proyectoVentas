@@ -1,0 +1,30 @@
+
+<div class="contenedor">
+  
+    <header class="title">
+    <h2 ><strong>
+      Lista de proveedores
+      </strong>
+    </h2>
+    </header>
+  <br>
+  <ng-container *ngFor="let proveedor of proveedores">
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-4 image">
+          <img class="img-fluid" (click)="upProveedor(proveedor._id)" src="{{url+'get-img-proveedor/'+proveedor.imagen}}">
+        </div>
+        <div class="col-md-8 texto ">
+          <a class="enlace" (click)="upProveedor(proveedor._id)"><strong><p class="desafio">{{proveedor.nombre}}</p></strong></a>
+          <p>{{proveedor.descripcion}}</p>
+        </div>
+      </div>
+    </div>
+  </div>         
+  <br>
+  </ng-container>
+  <br>
+  </div>
+  
+  

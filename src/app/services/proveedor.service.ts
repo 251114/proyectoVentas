@@ -37,12 +37,12 @@ export class ProveedorService {
   }
 
 
-  getProveedores(token) {
+  getProveedores(token, user:any) {
 
     let headers = new Headers({ 'Content-Type': 'application/json', 'Authorization': token });
     let options = new RequestOptions({ headers: headers });
 
-    return this._http.get(this.url + 'proveedores', options)
+    return this._http.get(this.url + 'proveedores/'+user, options)
       .map(res => res.json());
   }
 

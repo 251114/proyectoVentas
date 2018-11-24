@@ -1,42 +1,27 @@
-
-
-<div class="contenedor">
-
-    <header class="title">
-    <h2 ><strong>
-      Lista de Restaurantes
-      </strong>
-    </h2>
-    </header>
-  <br>
-  <ng-container *ngFor="let restaurant of restaurants">
-  <div class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-md-4 image">
-          <img class="img-fluid" (click)="upRestaurant(restaurant._id)" src="{{url+'get-img-restaurant/'+restaurant.imagen}}">
+<br><br>
+<section class="bg-light" id="portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h3 class="section-subheading text-muted">Lista de Productos</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-xs-12  col-sm-6 portfolio-item" *ngFor="let producto of productos; let i=index">
+        <div class="todo">
+          <div class="portfolio-link">
+            <img class="img-fluid img-prop" (click)="upProducto(producto._id)" src="{{url+'get-img-producto/'+producto.imagen}}">
+          </div>
+          <br>
+          <div class="portfolio-caption posicion">
+            <a (click)="upProducto(producto._id)" class="nav-link">
+              <h5 class="prop-title">{{producto.nombre}}</h5>
+            </a>
+            <p class="text-muted parrafo">{{producto.descripcion}}</p>
+          </div>
         </div>
-        <div class="col-sm-8 texto ">
-          <a class="enlace" (click)="upRestaurant(restaurant._id)">
-            <strong><p class="desafio">{{restaurant.nombre}}</p></strong></a>
-          <p class="tiempo">{{restaurant.descripcion}}</p>
-          <div class="botones">
-              <mat-card-actions>
-                <button mat-raised-button color="primary" (click)="upRestaurant(restaurant._id)">VER</button>
-              </mat-card-actions>
-            </div>
-            <br>
-        </div>
+        <br>
       </div>
     </div>
   </div>
-  <br>
-  </ng-container>
-  <br>
-  </div>
-
-  <div *ngIf="bandera==0">
-  <section  class="contenedor"></section>
-  </div>
-
-
+</section>

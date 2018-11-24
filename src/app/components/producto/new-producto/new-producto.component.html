@@ -1,0 +1,177 @@
+<div class="contenedor col-md-12 ">
+
+  <br>
+  <div class="container">
+
+    <div class="title">
+      <h4>{{title}}</h4>
+    </div>
+    <br>
+
+    <form>
+      <div class="row">
+        <div class="col-sm-10 offset-sm-1">
+
+          <div class="col-sm-12">
+            <mat-form-field appearance="outline" class="texto">
+              <mat-label>Nombre del Producto</mat-label>
+              <input matInput #nombre="ngModel" name="nombre" [(ngModel)]="producto.nombre" class="form-control"
+                #nombre maxlength="100" autocomplete="off" required>
+              <mat-hint align="end">{{nombre.value.length}} /100</mat-hint>
+            </mat-form-field>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-md-12 tip_ev">
+                <mat-form-field class="texto" appearance="outline">
+                  <mat-label>Descripción del producto</mat-label>
+                  <textarea matInput #descripcion="ngModel" name="descripcion" [(ngModel)]="producto.descripcion" rows="4"
+                    #descripcion maxlength="400" autocomplete="off" required></textarea>
+                  <mat-hint align="end">{{descripcion.value.length}} /400</mat-hint>
+                </mat-form-field>
+              </div>
+
+              <div class="col-xs-12 col-md-6">
+                <mat-form-field class="texto" appearance="outline">
+                  <mat-label>Seleccione talla de prenda</mat-label>
+                  <mat-select name="talla" [(ngModel)]="producto.talla" [formControl]="tallaControl" required>
+                    <mat-option *ngFor="let talla of tallas" [value]="talla.name">
+                      {{talla.name}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="col-xs-12 col-md-6 ">
+                <mat-form-field appearance="outline" class="texto">
+                  <mat-label>Cantidad</mat-label>
+                  <input matInput #cantidad="ngModel" name="cantidad" [(ngModel)]="producto.cantidad" class="form-control"
+                    #cantidad maxlength="100" autocomplete="off" required>
+                  <mat-hint align="end">{{cantidad.value.length}} /100</mat-hint>
+                </mat-form-field>
+              </div>
+
+              <div class="col-xs-12 col-md-12">
+                <mat-form-field appearance="outline" class="texto">
+                  <mat-label>Material</mat-label>
+                  <input matInput #material="ngModel" name="material" [(ngModel)]="producto.material" class="form-control"
+                    #material maxlength="100" autocomplete="off" required>
+                  <mat-hint align="end">{{material.value.length}} /100</mat-hint>
+                </mat-form-field>
+              </div>
+
+              <div class="col-xs-12 col-md-6">
+                <mat-form-field class="texto" appearance="outline">
+                  <mat-label>Envio internacional</mat-label>
+                  <mat-select name="envioInternacional" [(ngModel)]="producto.envioInternacional" [formControl]="envioControl" required>
+                    <mat-option *ngFor="let envio of envios" [value]="envio.name">
+                      {{envio.name}}
+                    </mat-option>
+                  </mat-select>
+                  <!-- <mat-error *ngIf="tipoControl.hasError('required')">No ha seleccionado envio de producto</mat-error> -->
+                </mat-form-field>
+              </div>
+              <div class="col-xs-12 col-md-6">
+                <mat-form-field class="texto" appearance="outline">
+                  <mat-label>Seleccione Proveedor</mat-label>
+                  <mat-select name="proveedor" [(ngModel)]="producto.proveedor" [formControl]="envioControl" required>
+                    <mat-option *ngFor="let proveedor of proveedores" [value]="proveedor._id">
+                      {{proveedor.nombre}}
+                    </mat-option>
+                  </mat-select>
+                  <!-- <mat-error *ngIf="tipoControl.hasError('required')">No ha seleccionado envio de producto</mat-error> -->
+                </mat-form-field>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-md-6 ">
+                <mat-form-field appearance="outline" class="texto">
+                  <mat-label>Precio compra</mat-label>
+                  <input matInput #precioCompra="ngModel" name="precioCompra" [(ngModel)]="producto.precioCompra" class="form-control"
+                    #precioCompra maxlength="100" autocomplete="off" required>
+                  <mat-hint align="end">{{precioCompra.value.length}} /100</mat-hint>
+                </mat-form-field>
+              </div>
+
+              <div class="col-xs-12 col-md-6 ">
+                <mat-form-field appearance="outline" class="texto">
+                  <mat-label>Precio venta</mat-label>
+                  <input matInput #precioVenta="ngModel" name="precioVenta" [(ngModel)]="producto.precioVenta" class="form-control"
+                    #precioVenta maxlength="100" autocomplete="off" required>
+                  <mat-hint align="end">{{precioVenta.value.length}} /100</mat-hint>
+                </mat-form-field>
+              </div>
+
+               
+              <div class="col-xs-12 col-md-12 tip_ev">
+                <mat-form-field class="texto" appearance="outline">
+                  <mat-label>Primera información del producto</mat-label>
+                  <textarea matInput #descripcion1="ngModel" name="descripcion1" [(ngModel)]="producto.descripcion1" rows="4"
+                    #descripcion1 maxlength="400" autocomplete="off" required></textarea>
+                  <mat-hint align="end">{{descripcion1.value.length}} /400</mat-hint>
+                </mat-form-field>
+              </div>
+
+              <div class="col-xs-12 col-md-12 tip_ev">
+                <mat-form-field class="texto" appearance="outline">
+                  <mat-label>Segunda información del producto</mat-label>
+                  <textarea matInput #descripcion2="ngModel" name="descripcion2" [(ngModel)]="producto.descripcion2" rows="4"
+                    #descripcion2 maxlength="400" autocomplete="off" required></textarea>
+                  <mat-hint align="end">{{descripcion2.value.length}} /400</mat-hint>
+                </mat-form-field>
+              </div>
+
+              <div class="col-xs-12 col-md-12 tip_ev">
+                <mat-form-field class="texto" appearance="outline">
+                  <mat-label>Tercera información del producto</mat-label>
+                  <textarea matInput #descripcion3="ngModel" name="descripcion3" [(ngModel)]="producto.descripcion3" rows="4"
+                    #descripcion3 maxlength="400" autocomplete="off" required></textarea>
+                  <mat-hint align="end">{{descripcion3.value.length}} /400</mat-hint>
+                </mat-form-field>
+              </div>
+              <div class="col-sm-12 tip_ev">
+                <label>
+                  <strong>Imagen Principal</strong>
+                </label>
+                <div class="div-imagen">
+                  <br>
+                  <div align="center">
+                    <div *ngIf="!imagenTemp" class="dropzone dz-clickable image" id="dropzone">
+                      <div class="dz-default dz-message">
+                        <span>
+                          <i class="fa fa-picture-o fa-2x"></i>
+                          <br>
+                        </span>
+                      </div>
+                    </div>
+                    <br *ngIf="imagenTemp">
+                    <img *ngIf="imagenTemp" [src]="imagenTemp" class="imgTemporal col-sm-10 img-fluid">
+                  </div>
+                  <br *ngIf="imagenTemp">
+
+                  <input type="file" class="offset-lg-3 imageD" (change)="fileChangeEvent($event , $event.target.files[0])">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="boton">
+        <button class="btn volver btnsave" [routerLink]="['/adm-producto']" type="button">
+          <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          Regresar</button>
+        <button class="btn guardar  btnsave" (click)="saveProducto()" type="button">
+          <i class="fa fa-floppy-o" aria-hidden="true"></i>
+          Guardar</button>
+      </div>
+
+    </form>
+  </div>
+  <br>
+</div>

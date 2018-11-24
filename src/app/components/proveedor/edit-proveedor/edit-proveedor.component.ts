@@ -31,14 +31,14 @@ export class EditProveedorComponent implements OnInit {
     { name: 'accesorios' }
   ];
 
-  public usuario;
+  public identity;
   public title: String = 'Edición de datos del proveedor';
   public token;
   public url;
   public proveedor: Proveedor;
   public mensajeError: String;
   // public _idRestaurant: String;
-  public imagenTemp: String;
+  public imagenTemp: any;
   restaurantId: string;
 
 
@@ -46,8 +46,8 @@ export class EditProveedorComponent implements OnInit {
     private _route: ActivatedRoute,
     private _router: Router) {
     this.token = this._userService.getToken();
-    this.usuario = this._userService.getIdentity();
-    this.proveedor = new Proveedor('', '', '', '', '', '', '');
+    this.identity = this._userService.getIdentity();
+    this.proveedor = new Proveedor('', '', '', '', '', '', '',this.identity._id);
     this.url = GLOBAL.url;
   }
 

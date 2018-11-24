@@ -1,7 +1,123 @@
+<!-- <app-menu></app-menu> -->
+<div class="page-wrapper chiller-theme toggled">
+  <nav id="sidebar" class="sidebar-wrapper">
+    <div class="sidebar-content">
+      <div id="toggle-sidebar">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="sidebar-brand">
+        <a>WoldShop</a>
+      </div>
+      <div class="sidebar-header">
+        <div class="user-pic">
+          <img class="img-fluid img-rounded" src="../../../assets/img/perfil.jpg" alt="">
+        </div>
+        <div class="user-info">
+          <span class="name_user nombreu">{{identity.name}}</span>
+          <span *ngIf="identity.role=='ROLE_ADMIN'" class="user-role">Dueño Empresa</span>
+          <span *ngIf="identity.role=='ROLE_USER'" class="user-role">Usuario</span>
+          <span class="user-status">
+            <i class="fa fa-circle"></i>
+            <span>Online</span>
+          </span>
+        </div>
+      </div>
+      <div class="sidebar-search">
+        <div>
+          <div class="input-group">
+            <input type="text" class="form-control search-menu" placeholder="Buscar...">
+            <span class="input-group-addon">
+              <i class="fa fa-search"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-menu">
+        <ul>
+          <li class="header-menu">
+            <span>Proveedor</span>
+          </li>
+          <li class="">
+            <a class="res_add" [routerLink]="['/principal']">
+              <i class="fa fa-dashboard"></i>
+              <span>Inicio</span>
+            </a>
+          </li>
+          <li class="" *ngIf="identity.role=='ROLE_ADMIN'">
+            <a class="res_add" [routerLink]="['/list-proveedor']">
+              <i class="fa fa-list" aria-hidden="true"></i>
+              <span>Proveedores</span>
+            </a>
+          </li>
+          <li class="" *ngIf="identity.role=='ROLE_ADMIN'">
+            <a class="res_add" [routerLink]="['/new-proveedor']">
+              <i class="fa fa-plus"></i>
+              <span>Nuevo Proveedor</span>
+            </a>
+          </li>
+          <li class="res_add" *ngIf="identity.role=='ROLE_ADMIN'">
+            <a [routerLink]="['/mant-proveedor']">
+              <i class="fa fa-cog"></i>
+              <span>Mantenimiento</span>
+            </a>
+          </li>
+          <!-- <li class="">
+                        <a >
+                            <i class="fa fa-globe"></i>
+                            <span>Maps</span>
+                        </a>
+                    </li> -->
+                    <li class="header-menu">
+                      <span>Productos</span>
+                    </li>
+                    <li class="res_add" *ngIf="identity.role=='ROLE_ADMIN'">
+                      <a [routerLink]="['/list-producto']">
+                        <i class="fa fa-list"></i>
+                        <span>Lista Productos</span>
+                      </a>
+                    </li>
+                    <li class="res_add" *ngIf="identity.role=='ROLE_ADMIN'">
+                      <a [routerLink]="['/new-producto']">
+                        <i class="fa fa-plus"></i>
+                        <span>Nuevo Producto</span>
+                      </a>
+                    </li>
+                    <li class="res_add" *ngIf="identity.role=='ROLE_ADMIN'">
+                      <a [routerLink]="['/adm-producto']">
+                        <i class="fa fa-cog"></i>
+                        <span>Administración</span>
+                      </a>
+                    </li>
+                    <li class="header-menu">
+                        <span>Ingresos</span>
+                      </li>
+                      <li class="res_add" *ngIf="identity.role=='ROLE_ADMIN'">
+                        <a [routerLink]="['/ganancias']">
+                          <i class="fa fa-list"></i>
+                          <span>Ver Ganancias</span>
+                        </a>
+                      </li>
+          <li class="header-menu">
+            <span>Cuenta</span>
+          </li>
+          <li>
+            <a [routerLink]="['/principal']" (click)="logout()" class="submenu-link">
+              <i class="fa fa-external-link-square" aria-hidden="true"></i>
+              <span>Cerrar sesión</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
 
   <main class="page-content">
+    <app-menu></app-menu>
+    <br> <br> <br> <br>
     <router-outlet></router-outlet>
-    <!-- <app-footer></app-footer> -->
-
   </main>
-<!-- </div> -->
+</div>

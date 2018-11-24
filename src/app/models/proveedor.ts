@@ -6,6 +6,7 @@ export class Proveedor {
     public email: String,
     public direccion: String,
     public descripcion: String,
-    public imagen: String
+    public imagen: String,
+    public user: String
   ){}
 }

@@ -1,0 +1,192 @@
+.btn{
+    color:white;
+    margin-top: 10px; 
+    font-weight: bold; 
+    font-size: 15px;
+}
+
+.modal-title{
+	background-color: #7F8C8D;
+}
+/*
+tbody{
+	background-color: white;
+}*/
+
+.section-tabla{
+	background-color: white;
+}
+
+.section-botones{
+	background-color: white;
+}
+
+.tabla{
+    border: 1px solid silver;
+    cursor: pointer;
+    box-shadow:  2px 2px 2px silver;
+}
+
+.botones{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.table>tbody>tr>td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 2px solid #ddd;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.table>thead>tr>th{
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-bottom: 2px solid #ddd;
+
+}
+
+.table{
+	font-size: 14px;
+	color: #747678;}
+
+    
+.titulo{
+    min-height: 100px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    background-color:   #808080;
+    color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
+
+
+/*Nuevos estilos*/
+
+.btn_add{
+    background: rgb(70,130,180,0.9);
+    color:white;
+    margin-right: 3px;
+    
+}
+.btn_add:hover{
+    background: rgb(70,130,180,1);    
+}
+
+.btn_edit{
+    background: rgb(169,169,169,0.9);
+    color:white;
+    
+}
+.btn_edit:hover{
+    background: rgb(169,169,169,1);    
+}
+
+.btn_delete{
+    background: rgb(165,42,42,0.9);
+    color:white;
+    
+}
+.btn_delete:hover{
+    background: rgb(165,42,42,1);    
+}
+
+
+.btn_plantilla{
+    background: rgb(100,149,237,0.9);
+    color:white;
+    
+}
+.btn_plantilla:hover{
+    background: rgb(100,149,237,1);    
+}
+
+.todo{
+    padding-bottom: 20px;
+    margin: 0 auto; 
+    box-shadow: 2px 2px 2px 2px silver;
+}
+
+.cabecera{
+    background: linear-gradient(to right,#008B8B,#20B2AA, #48D1CC );
+    color:white;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    box-shadow: 2.5px 2.5px 2.5px 0px silver;
+}
+
+.cabecera h5{
+    margin-left: 10px;
+}
+
+.opciones{
+    margin-bottom: 20px;
+}
+
+.theader{
+    background: linear-gradient(to right,#21618C,#5499C7, #3498DB );
+    color: white;
+}
+
+.color{
+    background: #F0F8FF;
+}
+
+.iconos{
+    float: right;
+    margin-bottom: 10px;
+   font-weight: bold;
+   margin-top: 3px;
+}
+
+.lapiz, .delete, .plus{
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.iconplus{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.info{
+    font-size: 15px;
+    color: #747678;
+    font-style: italic;
+}
+
+.lista{
+    margin-bottom: -10px;
+    margin-top: 30px;
+}
+
+h5{
+    color: white !important;
+}
+.btnprevious{
+    background: rgb(119,136,153,0.9);
+    margin-right: 3px;
+}
+
+.btnprevious:hover{
+  background: rgb(119,136,153,1);
+  color: white;
+} 

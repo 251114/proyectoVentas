@@ -1,70 +1,50 @@
-/* import { Component, OnInit } from '@angular/core';
-import { RestaurantService } from '../../../services/restaurant.service';
-import { Restaurant } from '../../../models/restaurant';
+import { Producto } from './../../../models/producto';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { GLOBAL } from '../../../services/global';
-import { UserService } from '../../../services/user.service';
-
-import { Router, ActivatedRoute, Params } from '@angular/router';
+import {Router,ActivatedRoute, Params} from '@angular/router';
+import { UserService } from 'src/app/services/user.service';
+import { ProductoService } from 'src/app/services/producto.service';
+declare var JQuery:any;
+declare var $:any;
 
 @Component({
-  selector: 'list-producto',
+  selector: 'app-list-producto',
   templateUrl: './list-producto.component.html',
   styleUrls: ['./list-producto.component.css'],
-  providers: [RestaurantService, UserService]
-
+  providers: [ProductoService,UserService]
 })
+
 export class ListProductoComponent implements OnInit {
   public identity;
   public token;
+  public productos:Producto[]=[];
   public url;
-  public restaurant: Restaurant;
-  public restaurants: Restaurant[] = [];
-  public bandera: any = 0;
 
-  constructor(private _restaurantService: RestaurantService, private _userService: UserService, private _route: ActivatedRoute,
-    private _router: Router) {
-    this.url = GLOBAL.url;
-    this.identity = this._userService.getIdentity();
-    this.token = this._userService.getToken();
-    this.restaurant = new Restaurant('', '', '', '', '', '', '', this.identity);
-
-  }
+  constructor(private _userService:UserService, 
+    private _productoService:ProductoService,
+    private _route:ActivatedRoute,
+    private _router:Router) { 
+      this.identity = this._userService.getIdentity();
+      this.token = this._userService.getToken();
+      this.url=GLOBAL.url;
+    }
 
   ngOnInit() {
-    this.getRestaurants();
+    this.getProductos();
   }
+  
 
-  upRestaurant(idRestaurant: String) {
-    this._router.navigate(['/restaurant/' + idRestaurant]);
-  }
-
-
-  editRestaurant(idRestaurant: String) {
-    this._router.navigate(['/editrestaurant/' + idRestaurant]);
-  }
-
-  getRestaurants() {
-    //   this._eventoService.getEventos(this.token, this.identity._id).subscribe(
-    this._restaurantService.getRestaurants(this.token).subscribe(
-      response => {
-        if (!response.restaurants) {
-          //  this.aletMessage
-        } else {
-          this.restaurants = response.restaurants;
-          if (this.restaurants.length > 0) {
-            this.bandera = 1;
+  getProductos()
+  {                  
+        this._productoService.getProductos(this.token, this.identity._id).subscribe(
+            response =>{
+              if(!response.productos){
+                }else{
+                    this.productos= response.productos;
+                 }  
+            },
+          error =>{
           }
-          console.log(this.restaurants);
-        }
-      },
-      error => {
-        var errorMessage = <any>error;
-        if (errorMessage != null) {
-          console.log(error);
-        }
-      }
-    );
-  }
-
+     );
+    }
 }
- */

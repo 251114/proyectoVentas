@@ -1,0 +1,47 @@
+<div class="imagen">
+	
+	<img class=" img-desafio" src="{{url+'get-img-proveedor/'+imagen}}" alt="">
+</div>
+<div class="seccion" id="services">
+	<div class="container descripcion">
+		 
+        <div class="col-md-12">
+            <p class="detalle"> DETALLES DEL PROVEEDOR</p>
+            <div class="detalle_des">
+              <span class="primero">Nombre </span>
+              <span class="det">
+                {{proveedor.nombre}}
+              </span>
+              <hr>
+              <span class="primero">descripcion </span>
+              <span class="det">{{proveedor.descripcion}}</span>
+              <hr>
+              <span class="primero">Tipo </span>
+              <span class="det">
+                {{proveedor.tipo}}
+              </span>
+              <hr>
+              <span class="primero">Celular </span>
+              <span class="det">
+                {{proveedor.celular}}
+              </span>
+              <hr>
+              <span class="primero">email </span>
+              <span class="det">{{proveedor.email}}</span>
+              <hr>
+              <span class="primero">direccion </span>
+              <span class="det">{{proveedor.direccion}}</span>
+              <hr>
+            </div>
+          </div>
+       
+	  
+		<br>
+		<button [routerLink]="['/new-proveedor']" class="btn btn-info offset-xl-5 boton">
+			<strong>
+				<i class="fa fa-plus" aria-hidden="true"></i>
+				AÑADIR PROVEEDOR</strong>
+        </button>
+	</div>
+</div>
+<!-- <app-cards></app-cards> -->
