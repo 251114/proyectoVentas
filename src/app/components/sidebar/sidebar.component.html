@@ -46,7 +46,7 @@
               <span>Inicio</span>
             </a>
           </li>
-          <li class="" *ngIf="identity.role=='ROLE_ADMIN'">
+          <li class="" >
             <a class="res_add" [routerLink]="['/list-proveedor']">
               <i class="fa fa-list" aria-hidden="true"></i>
               <span>Proveedores</span>
@@ -73,7 +73,7 @@
                     <li class="header-menu">
                       <span>Productos</span>
                     </li>
-                    <li class="res_add" *ngIf="identity.role=='ROLE_ADMIN'">
+                    <li class="res_add" >
                       <a [routerLink]="['/list-producto']">
                         <i class="fa fa-list"></i>
                         <span>Lista Productos</span>
